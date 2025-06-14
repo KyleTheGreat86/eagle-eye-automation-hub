@@ -52,6 +52,23 @@ const Index = () => {
                 "Processing 3,000 claims/month? You're spending $10,500. We'll do it for $1,500."
               </p>
             </div>
+
+            {/* YouTube VSL Section */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Agency Eagle Eye - Medical Billing Automation Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <p className="text-sm text-gray-600 mt-3 text-center">
+                Watch how we transform 8-minute manual claims into 90-second automated processing
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
