@@ -22,7 +22,7 @@ export const ROICalculator = () => {
   const newProfitMargin = monthlySavings;
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-green-50 to-blue-50">
+    <section id="roi-calculator" className="py-16 px-4 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-green-100 text-green-800 hover:bg-green-200">

@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToROI = () => {
+    const roiSection = document.querySelector('#roi-calculator');
+    if (roiSection) {
+      roiSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -21,20 +29,23 @@ export const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium">
-              Home
+            <Link to="/services" className="text-gray-700 hover:text-blue-600 font-medium">
+              How It Works
             </Link>
             <Link to="/services" className="text-gray-700 hover:text-blue-600 font-medium">
-              Services
+              Pricing
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium">
-              About
-            </Link>
+            <button 
+              onClick={scrollToROI}
+              className="text-gray-700 hover:text-blue-600 font-medium"
+            >
+              ROI Calculator
+            </button>
             <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium">
               Contact
             </Link>
             <Button className="bg-green-600 hover:bg-green-700 text-white">
-              Schedule Consultation
+              Schedule Demo
             </Button>
           </div>
 
@@ -55,26 +66,25 @@ export const Navbar = () => {
           <div className="md:hidden border-t border-gray-200 py-4">
             <div className="flex flex-col space-y-4">
               <Link 
-                to="/" 
+                to="/services" 
                 className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Home
+                How It Works
               </Link>
               <Link 
                 to="/services" 
                 className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Services
+                Pricing
               </Link>
-              <Link 
-                to="/about" 
-                className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2"
-                onClick={() => setIsOpen(false)}
+              <button 
+                onClick={scrollToROI}
+                className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2 text-left"
               >
-                About
-              </Link>
+                ROI Calculator
+              </button>
               <Link 
                 to="/contact" 
                 className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2"
@@ -84,7 +94,7 @@ export const Navbar = () => {
               </Link>
               <div className="px-4">
                 <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                  Schedule Consultation
+                  Schedule Demo
                 </Button>
               </div>
             </div>
