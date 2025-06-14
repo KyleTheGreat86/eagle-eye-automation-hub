@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,46 +8,46 @@ import { Navbar } from "@/components/Navbar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 bg-gradient-to-br from-blue-50 to-white">
+      <section className="pt-20 pb-16 px-4 hero-gradient">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-5xl mx-auto">
-            <Badge className="mb-6 bg-green-100 text-green-800 hover:bg-green-200">
+            <Badge className="mb-6 bg-secondary/50 text-primary border border-primary/20 hover:bg-secondary/70 uppercase-label">
               No Software Changes or New Training Needed
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Medical Billing Companies Save $5,000+ Per Month While Cutting CMS-1500 Time from 8 Minutes to 90 Seconds
             </h1>
-            <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-medium">
+            <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium subhead">
               Stop losing $3.50 per claim on manual data entry. Our AI processes CMS-1500s into your existing PM system for $0.50/claim—with zero setup and same-day onboarding.
             </h2>
             
             {/* Benefit Points */}
             <div className="grid md:grid-cols-2 gap-4 mb-8 max-w-4xl mx-auto">
-              <div className="flex items-center text-left">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                <span className="text-lg"><strong>$5,000+ Monthly Savings</strong> – Slash labor costs by 85% immediately</span>
+              <div className="flex items-center text-left superhuman-card p-4">
+                <CheckCircle className="h-6 w-6 text-success mr-3 flex-shrink-0" />
+                <span className="text-lg text-white"><strong className="text-primary">$5,000+ Monthly Savings</strong> – Slash labor costs by 85% immediately</span>
               </div>
-              <div className="flex items-center text-left">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                <span className="text-lg"><strong>90-Second Claims</strong> – Process 100+/hour vs. 4-7 manually</span>
+              <div className="flex items-center text-left superhuman-card p-4">
+                <CheckCircle className="h-6 w-6 text-success mr-3 flex-shrink-0" />
+                <span className="text-lg text-white"><strong className="text-primary">90-Second Claims</strong> – Process 100+/hour vs. 4-7 manually</span>
               </div>
-              <div className="flex items-center text-left">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                <span className="text-lg"><strong>Works in Your Current Software</strong> – Medisoft, AdvancedMD, NextGen, etc.</span>
+              <div className="flex items-center text-left superhuman-card p-4">
+                <CheckCircle className="h-6 w-6 text-success mr-3 flex-shrink-0" />
+                <span className="text-lg text-white"><strong className="text-primary">Works in Your Current Software</strong> – Medisoft, AdvancedMD, NextGen, etc.</span>
               </div>
-              <div className="flex items-center text-left">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                <span className="text-lg"><strong>Fewer Denials</strong> – 99.9% accuracy eliminates $25 rework costs</span>
+              <div className="flex items-center text-left superhuman-card p-4">
+                <CheckCircle className="h-6 w-6 text-success mr-3 flex-shrink-0" />
+                <span className="text-lg text-white"><strong className="text-primary">Fewer Denials</strong> – 99.9% accuracy eliminates $25 rework costs</span>
               </div>
             </div>
 
             {/* ROI Teaser */}
-            <div className="bg-gradient-to-r from-green-100 to-blue-100 p-6 rounded-lg mb-8 max-w-3xl mx-auto">
-              <p className="text-xl font-semibold text-gray-800">
+            <div className="metric-highlight p-6 rounded-xl mb-8 max-w-3xl mx-auto">
+              <p className="text-xl font-semibold text-white">
                 "Processing 3,000 claims/month? You're spending $10,500. We'll do it for $1,500."
               </p>
             </div>
@@ -57,7 +56,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto mb-8">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <iframe
-                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                  className="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl border border-white/10"
                   src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                   title="Agency Eagle Eye - Medical Billing Automation Demo"
                   frameBorder="0"
@@ -65,17 +64,17 @@ const Index = () => {
                   allowFullScreen
                 ></iframe>
               </div>
-              <p className="text-sm text-gray-600 mt-3 text-center">
+              <p className="text-sm text-muted-foreground mt-3 text-center">
                 Watch how we transform 8-minute manual claims into 90-second automated processing
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
+              <Button size="lg" className="cta-primary hover-lift px-8 py-4 text-lg">
                 Start FREE 100-Claim Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+              <Button variant="outline" size="lg" className="cta-secondary px-8 py-4 text-lg">
                 See Exact Savings for My Company
               </Button>
             </div>
@@ -84,30 +83,30 @@ const Index = () => {
       </section>
 
       {/* Video Demo Section */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-secondary/30">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             How Billing Pros Saved $14,000/Month Without Changing Software
           </h2>
           
           <div className="max-w-4xl mx-auto mb-8">
-            <div className="bg-gray-200 rounded-lg aspect-video flex items-center justify-center">
+            <div className="superhuman-card rounded-xl aspect-video flex items-center justify-center p-8">
               <div className="text-center">
-                <Play className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                <p className="text-lg text-gray-600">3-min demo showing CMS-1500 PDF → Auto-populated Medisoft fields in 90 sec</p>
+                <Play className="h-16 w-16 text-primary mx-auto mb-4" />
+                <p className="text-lg text-muted-foreground">3-min demo showing CMS-1500 PDF → Auto-populated Medisoft fields in 90 sec</p>
               </div>
             </div>
           </div>
           
-          <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             Watch our AI extract patient data, ICD-10s, and CPT codes overnight—no manual entry, no errors.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button size="lg" className="cta-primary hover-lift">
               Book 15-Min Demo
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="cta-secondary">
               See Live Accuracy Test
             </Button>
           </div>
@@ -118,45 +117,45 @@ const Index = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Every Manual CMS-1500 Costs You $3.50 in Wasted Biller Time
             </h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center border-red-200">
+            <Card className="superhuman-card text-center border-destructive/20">
               <CardHeader>
-                <Users className="h-12 w-12 text-red-500 mx-auto mb-4" />
-                <CardTitle className="text-xl text-red-700">Biller Burnout</CardTitle>
+                <Users className="h-12 w-12 text-destructive mx-auto mb-4" />
+                <CardTitle className="text-xl text-destructive">Biller Burnout</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>8-12 mins/claim at $25/hr = $3.50 wasted per claim</li>
                   <li>Senior staff stuck on data entry instead of AR follow-up</li>
                 </ul>
               </CardContent>
             </Card>
             
-            <Card className="text-center border-orange-200">
+            <Card className="superhuman-card text-center border-orange-500/20">
               <CardHeader>
                 <TrendingUp className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <CardTitle className="text-xl text-orange-700">Shrinking Margins</CardTitle>
+                <CardTitle className="text-xl text-orange-500">Shrinking Margins</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>Charging clients $4/claim but costing you $3.50 to process</li>
                   <li>20% revenue lost to denials from keying errors</li>
                 </ul>
               </CardContent>
             </Card>
             
-            <Card className="text-center border-blue-200">
+            <Card className="superhuman-card text-center border-primary/20">
               <CardHeader>
-                <Target className="h-12 w-12 text-blue-500 mx-auto mb-4" />
-                <CardTitle className="text-xl text-blue-700">Lost Competitiveness</CardTitle>
+                <Target className="h-12 w-12 text-primary mx-auto mb-4" />
+                <CardTitle className="text-xl text-primary">Lost Competitiveness</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="text-gray-600 space-y-2">
+                <ul className="text-muted-foreground space-y-2">
                   <li>Competitors submit claims same-day; yours take 48+ hours</li>
                 </ul>
               </CardContent>
@@ -166,17 +165,17 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-16 px-4 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               AI-Powered CMS-1500 Processing That Fits Your Existing Workflow
             </h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">How It Works</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">How It Works</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1">
@@ -241,9 +240,9 @@ const Index = () => {
       <ROICalculator />
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-secondary/30">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Simple Pricing: Save $5,000+ Monthly or Pay Nothing
           </h2>
           
@@ -291,36 +290,36 @@ const Index = () => {
       {/* Social Proof Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Trusted by Medical Billing Leaders
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
+            <Card className="superhuman-card p-6">
               <CardContent className="pt-0">
                 <div className="flex items-center mb-4">
-                  <Users className="h-8 w-8 text-blue-600 mr-3" />
+                  <div className="testimonial-quote mr-4">"</div>
                   <div>
-                    <div className="font-semibold">Sarah M.</div>
-                    <div className="text-sm text-gray-500">Regional Medical Billing (500+ providers)</div>
+                    <div className="font-semibold text-white">Sarah M.</div>
+                    <div className="text-sm text-muted-foreground">Regional Medical Billing (500+ providers)</div>
                   </div>
                 </div>
-                <blockquote className="text-gray-700 italic leading-relaxed">
+                <blockquote className="text-muted-foreground italic leading-relaxed">
                   "We saved $14,200 last month alone. Now our billers focus on denials instead of data entry."
                 </blockquote>
               </CardContent>
             </Card>
             
-            <Card className="p-6">
+            <Card className="superhuman-card p-6">
               <CardContent className="pt-0">
                 <div className="flex items-center mb-4">
-                  <Users className="h-8 w-8 text-green-600 mr-3" />
+                  <div className="testimonial-quote mr-4">"</div>
                   <div>
-                    <div className="font-semibold">Mike K.</div>
-                    <div className="text-sm text-gray-500">Healthcare Revenue Solutions</div>
+                    <div className="font-semibold text-white">Mike K.</div>
+                    <div className="text-sm text-muted-foreground">Healthcare Revenue Solutions</div>
                   </div>
                 </div>
-                <blockquote className="text-gray-700 italic leading-relaxed">
+                <blockquote className="text-muted-foreground italic leading-relaxed">
                   "Implemented on Tuesday, saved $5,600 by Friday. Zero training needed."
                 </blockquote>
               </CardContent>
@@ -330,25 +329,25 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+      <section className="py-16 px-4 bg-gradient-to-r from-secondary to-card text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Keep Your Software. Keep Your Staff. Save $5,000+ Next Month.
           </h2>
-          <p className="text-xl mb-8 leading-relaxed opacity-90">
+          <p className="text-xl mb-8 leading-relaxed text-muted-foreground">
             Process 100 claims FREE. Pay only if you save.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
+            <Button size="lg" className="cta-primary hover-lift px-8 py-4 text-lg">
               Start Free Pilot
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
+            <Button variant="outline" size="lg" className="cta-secondary px-8 py-4 text-lg">
               Get Custom Savings Estimate
             </Button>
           </div>
           <div className="mt-8 text-center">
-            <p className="text-sm opacity-75">📞 Mon-Fri 9AM-6PM EST | ✉ kyle@agencyeagleeye.com</p>
+            <p className="text-sm text-muted-foreground">📞 Mon-Fri 9AM-6PM EST | ✉ kyle@agencyeagleeye.com</p>
           </div>
         </div>
       </section>

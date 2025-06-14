@@ -16,35 +16,35 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <nav className="fixed top-0 left-0 right-0 navbar-blur z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AE</span>
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">AE</span>
             </div>
-            <span className="font-bold text-xl text-gray-900">Agency Eagle Eye</span>
+            <span className="font-bold text-xl text-white">Agency Eagle Eye</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/services" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link to="/services" className="text-muted-foreground hover:text-primary font-medium transition-colors">
               How It Works
             </Link>
-            <Link to="/services" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link to="/services" className="text-muted-foreground hover:text-primary font-medium transition-colors">
               Pricing
             </Link>
             <button 
               onClick={scrollToROI}
-              className="text-gray-700 hover:text-blue-600 font-medium"
+              className="text-muted-foreground hover:text-primary font-medium transition-colors"
             >
               ROI Calculator
             </button>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link to="/contact" className="text-muted-foreground hover:text-primary font-medium transition-colors">
               Contact
             </Link>
-            <Button className="bg-green-600 hover:bg-green-700 text-white">
+            <Button className="cta-primary hover-lift">
               Schedule Demo
             </Button>
           </div>
@@ -55,6 +55,7 @@ export const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
+              className="text-white hover:bg-white/10"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -63,37 +64,37 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4">
+          <div className="md:hidden border-t border-white/10 py-4">
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/services" 
-                className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2"
+                className="text-muted-foreground hover:text-primary font-medium px-4 py-2 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 How It Works
               </Link>
               <Link 
                 to="/services" 
-                className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2"
+                className="text-muted-foreground hover:text-primary font-medium px-4 py-2 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
               </Link>
               <button 
                 onClick={scrollToROI}
-                className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2 text-left"
+                className="text-muted-foreground hover:text-primary font-medium px-4 py-2 text-left transition-colors"
               >
                 ROI Calculator
               </button>
               <Link 
                 to="/contact" 
-                className="text-gray-700 hover:text-blue-600 font-medium px-4 py-2"
+                className="text-muted-foreground hover:text-primary font-medium px-4 py-2 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
               <div className="px-4">
-                <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                <Button className="w-full cta-primary hover-lift">
                   Schedule Demo
                 </Button>
               </div>
